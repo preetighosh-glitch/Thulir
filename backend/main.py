@@ -65,6 +65,7 @@ def home():
 
 
 @app.post("/financial-data")
+@app.post("/financial-data")
 def receive_financial_data(data: FinancialData):
 
     connection = get_connection()
@@ -113,6 +114,7 @@ def get_financial_state(data: FinancialData):
         "message": "Financial state created successfully",
         "financial_state": financial_state
     }
+@app.get("/api/financial-data")
 @app.get("/financial-data")
 def get_financial_data():
 
