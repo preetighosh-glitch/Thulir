@@ -77,7 +77,7 @@ export default function Preparedness({ financialForm, preparednessRefreshKey }: 
   useEffect(() => {
     const loadResilience = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/financial-data', {
+        const response = await fetch('/api/financial-data', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -122,7 +122,7 @@ export default function Preparedness({ financialForm, preparednessRefreshKey }: 
       setError('')
 
       try {
-        const response = await fetch('http://127.0.0.1:8000/api/anomalies', {
+        const response = await fetch('/api/anomalies', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
